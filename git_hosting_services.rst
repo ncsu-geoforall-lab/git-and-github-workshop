@@ -48,6 +48,7 @@ server, so you are independent on a provider. There is nothing special
 about having own Gitorious in an organization, it is just another sever
 application.
 
+They discussed their terms of use with the Free Software Foundation.
 
 Bitbucket
 =========
