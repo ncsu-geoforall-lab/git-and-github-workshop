@@ -32,6 +32,11 @@ private repositories with unlimited number of collaborators. However,
 size limits may apply (to repositories, not collaborators) depending
 on an organization.
 
+When you need to collaborate with various people this is not an option
+for you, although there are still ways of sharing which Git itself provides.
+The advantage for you is that you can create private repositories to
+test various Git or GitHub features and it is not visible.
+
 
 Gitorious
 =========
