@@ -20,7 +20,7 @@ Now you can remove the *bare* clone::
     cd ..
     rm -rf repository-name.git
 
-It is advisable to mark the old remote repository as not active or read only in some way, add note to description or to README file. You can consider also removing the old repository to avoid confusion (the disadvantage is that you loose one backup but anyway this backup will be outdated soon).
+It is advisable to mark the old remote repository as not active, read only or private in some way, add note to description or to README file. You can consider also removing the old repository to avoid confusion (the disadvantage is that you loose one backup but anyway this backup will be outdated soon).
 
 If you or your colleagues have the existing clone (local working copy) of the repository, you can change the remote repository URL to the new one (assuming the remote repository is named ``origin`` in most cases)::
 
