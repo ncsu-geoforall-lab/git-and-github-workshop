@@ -61,12 +61,14 @@ Can also import all account repositories from GitHub (probably only
 github.com; but not tested).
 
 
-Dropbox, Ubuntu One, ownCloud or similar services including your own network shared folder
+Dropbox, Ubuntu One, ownCloud or similar services including your own shared network folder
 ==========================================================================================
 
 * https://www.dropbox.com/
 * https://one.ubuntu.com/
 * http://owncloud.org/
+* shared network folder
+* your USB memory stick or external hard drive
 * ...
 
 All these file cloud services are similar and free of charge to
