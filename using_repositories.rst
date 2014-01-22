@@ -5,7 +5,7 @@ Get the URL from the old repository host and do a *bare* clone of the repository
 
     git clone --bare the/repository/url/at/old/host
 
-Create a (remote) repository at GitHub. Create the repository as empty repository without any files (without ``.gitignore``, ``README`` (``README.md``/``README.rst``) and ``LICENCE`` files). Get repository URL from GitHub project .
+Create a (remote) repository at GitHub. Create the repository as empty repository without any files (without ``.gitignore``, ``README`` (``README.md``/``README.rst``) and ``LICENCE`` files). Get repository URL from GitHub project.
 
 Go to the directory with *bare* clone of your repository::
 
