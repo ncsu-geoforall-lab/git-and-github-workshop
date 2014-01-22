@@ -1,8 +1,10 @@
+*All examples suppose that you are using unix-like command line (so, use Git Bash on MS Windows).*
+
+
 Using Git together with Dropbox
 ===============================
 
 *Note that this works also for other services and also any file-based backup ways such as USB memory sticks.*
-*This guide suppose that you use unix-like command line (so, use Git Bash on MS Windows).*
 
 Create a *bare* repository in the Dropbox directory (this one will act as a remote repository)::
 
