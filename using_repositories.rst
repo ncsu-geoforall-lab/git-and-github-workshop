@@ -4,13 +4,13 @@ Using Git together with Dropbox
 *Note that this works also for other services and also any file-based backup ways such as USB memory sticks.*
 *This guide suppose that you use unix-like command line (so, use Git Bash on MS Windows).*
 
-Create a *bare* repository in the Dropbox directory (this one will act as a remote repository):
+Create a *bare* repository in the Dropbox directory (this one will act as a remote repository)::
 
     mkdir my_project
     cd my_project
     git init --bare
 
-If you already have some project with some files in a directory, go to that directory and run git commands to initialize the repository:
+If you already have some project with some files in a directory, go to that directory and run git commands to initialize the repository::
 
     cd project_dir
     git init
@@ -21,7 +21,7 @@ If you already have some project with some files in a directory, go to that dire
 
 Note that ``git add *`` will add all files in the directory. If you want to add only some specify their names instead of using ``*``.
 
-For the other (basic) workflow, you just need:
+For the other (basic) workflow, you just need::
 
     git add some_filename
     git commit -am "describe changes here"
