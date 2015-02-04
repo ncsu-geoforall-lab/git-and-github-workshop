@@ -49,7 +49,7 @@ Push the changes using the ``--mirror`` option to upload everything (all branche
 
     git push --mirror the/repository/url/at/new/host
 
-Alternatively, if you don't want to migrate all branches but just master branch, you can use:
+Alternatively, if you don't want to migrate all branches but just master branch, you can use::
 
     git remote set-url origin the/repository/url/at/new/host
     git push -u origin master
