@@ -27,7 +27,7 @@
 
 <nav>
 <ul class="nav">
-<a href="index.html"><li>Index</li></a>
+<li><a href="index.html">Index</a></li>
 </ul>
 </nav>
 
@@ -35,50 +35,20 @@
 
 <main>
 <!-- This is a generated file. Do not edit. -->
-Basic Git introduction
-======================
-
-If there is a existing remote repository, clone the repository (supposing SSH access, using GitHub as an example)::
-
-    git clone git@github.com:repositoryowner/repositoryname.git
-
-Do all the changes in the ``repositoryname`` directory created by the ``git clone`` command.
-
-Once you edit some files, use ``git commit`` to commit them. Use ``-a`` flag to
-commit all or specify the filenames to commit just some of them.
-Use ``-m "some commit message"`` to describe the changes you made.
-The fastest way to commit might be, for example::
-
-    git commit -am "updated for GRASS GIS 7"
-
-If you want to provide a longer commit message, just omit the ``-m "..."`` and
-you will get an editor (``nano`` text terminal editor by default on GNU/Linux)
-where you can write a commit message.
-
-If you created a new file, you have to tell Git to start tracking it::
-
-    git add some_file.txt
-
-If you want to delete or move files, use ``git rm`` and ``git mv``.
-
-To see what files where changed, added or deleted use ``git status``.
-
-To review the changes in the files use ``git diff``.
-
-The commit itself records the change locally but does not put the change
-to the remote repository.
-Once you are ready to share your changes with others use ``git push``
-to put the changes to the remote repository.
-All commits which were not pushed yet will by pushed.
-
-To get the changes of other contributors use ``git pull``.
-You always have to pull before you push. It is often necessary to commit
-your changes before ``git pull`` otherwise Git will not be able to merge
-the incoming changes. If you get an editor with a message about merging,
-it is enough just to use the generated message by exiting the editor
-(using Ctrl+X in case the editor is ``nano``).
-If the automatic merge is not possible, Git will put the conflicting parts
-into the files and mark them. Consult the further steps with other contributors.
+<h1 id="basic-git-introduction">Basic Git introduction</h1>
+<p>If there is a existing remote repository, clone the repository (supposing SSH access, using GitHub as an example):</p>
+<pre><code>git clone git@github.com:repositoryowner/repositoryname.git</code></pre>
+<p>Do all the changes in the <code>repositoryname</code> directory created by the <code>git clone</code> command.</p>
+<p>Once you edit some files, use <code>git commit</code> to commit them. Use <code>-a</code> flag to commit all or specify the filenames to commit just some of them. Use <code>-m &quot;some commit message&quot;</code> to describe the changes you made. The fastest way to commit might be, for example:</p>
+<pre><code>git commit -am &quot;updated for GRASS GIS 7&quot;</code></pre>
+<p>If you want to provide a longer commit message, just omit the <code>-m &quot;...&quot;</code> and you will get an editor (<code>nano</code> text terminal editor by default on GNU/Linux) where you can write a commit message.</p>
+<p>If you created a new file, you have to tell Git to start tracking it:</p>
+<pre><code>git add some_file.txt</code></pre>
+<p>If you want to delete or move files, use <code>git rm</code> and <code>git mv</code>.</p>
+<p>To see what files where changed, added or deleted use <code>git status</code>.</p>
+<p>To review the changes in the files use <code>git diff</code>.</p>
+<p>The commit itself records the change locally but does not put the change to the remote repository. Once you are ready to share your changes with others use <code>git push</code> to put the changes to the remote repository. All commits which were not pushed yet will by pushed.</p>
+<p>To get the changes of other contributors use <code>git pull</code>. You always have to pull before you push. It is often necessary to commit your changes before <code>git pull</code> otherwise Git will not be able to merge the incoming changes. If you get an editor with a message about merging, it is enough just to use the generated message by exiting the editor (using Ctrl+X in case the editor is <code>nano</code>). If the automatic merge is not possible, Git will put the conflicting parts into the files and mark them. Consult the further steps with other contributors.</p>
 
 </main>
 
