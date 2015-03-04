@@ -1,5 +1,8 @@
+Git hosting services
+====================
+
 GitHub
-======
+------
 
 https://github.com/
 
@@ -10,7 +13,7 @@ of Gits; it would be better to check some documentation or terms of use).
 
 
 GitHub Enterprise
-=================
+-----------------
 
 We are not focusing on paid option in this document, however the main
 audience of this document has free (already paid) access to the this
@@ -39,7 +42,7 @@ test various Git or GitHub features and it is not visible.
 
 
 Gitorious
-=========
+---------
 
 https://gitorious.org/
 
@@ -51,7 +54,7 @@ application.
 They discussed their terms of use with the Free Software Foundation.
 
 Bitbucket
-=========
+---------
 
 https://bitbucket.org
 
@@ -62,7 +65,7 @@ github.com; but not tested).
 
 
 Dropbox, Ubuntu One, ownCloud or similar services including your own shared network folder
-==========================================================================================
+------------------------------------------------------------------------------------------
 
 * https://www.dropbox.com/
 * https://one.ubuntu.com/

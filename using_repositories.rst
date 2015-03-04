@@ -1,8 +1,11 @@
+Using repositories
+==================
+
 *All examples suppose that you are using unix-like command line (so, use Git Bash on MS Windows).*
 
 
 Using Git together with Dropbox
-===============================
+-------------------------------
 
 *Note that this works also for other services and also any file-based backup ways such as USB memory sticks.*
 
@@ -33,7 +36,7 @@ All commands shall be executed in the directory with the project, not in the dir
 
 
 Migrating repository to GitHub from another hosting option
-==========================================================
+----------------------------------------------------------
 
 Get the URL from the old repository host and do a *bare* clone of the repository (using ``--bare`` option)::
 
