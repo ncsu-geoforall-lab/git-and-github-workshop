@@ -33,15 +33,24 @@
 
 <main>
 <!-- This is a generated file. Do not edit. -->
-<h1>Git and GitHub workshop</h1>
-
-<ul>
-<li><a href="basic_commands.html">Basic Git introduction</a></li>
-<li><a href="other_commands.html">Other Git commands</a></li>
-<li><a href="branches.html">Working with branches</a></li>
-<li><a href="git_hosting_services.html">Git hosting services</a></li>
-<li><a href="using_repositories.html">Using repositories</a></li>
-</ul>
+<h1 id="other-git-commands">Other Git commands</h1>
+<p>This is a selection of commands which are not essential but are very useful and still quite easy.</p>
+<blockquote>
+<p>git checkout some_file.txt</p>
+<p>git clone url/of/a/repository custom_directory_name</p>
+<p>Commit just certain files:</p>
+<p>git diff some_file.txt some_other_file.txt git commit some_file.txt some_other_file.txt -m &quot;message&quot;</p>
+<p>git reset --hard</p>
+<p>git revert --no-edit 51ef1b3</p>
+</blockquote>
+<p><code>--no-edit</code> if we don't want to change commit message (default message is <code>Revert &quot;original commit message&quot;</code>). If <code>--no-commit</code> is provided as parameter, automatic commit is not executed.</p>
+<blockquote>
+<p>git diff --ignore-space-change</p>
+<p>git commit --amend -m &quot;new commit message&quot;</p>
+<p>git stash</p>
+<p>git stash apply git stash apply --index</p>
+<p>git log --graph --oneline</p>
+</blockquote>
 
 </main>
 

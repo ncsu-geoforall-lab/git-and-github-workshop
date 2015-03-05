@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title></title>
+<title>Git and GitHub workshop</title>
 
 <link rel="shortcut icon" href="./img/favicon.ico" />
 
@@ -18,19 +18,14 @@
 
 <header>
 <div id="header-image">
-    <p>
-        <a href="index.html">
-            
-        </a>
-    </p>
 </div>
 
 <nav>
 <ul class="nav">
 <li><a href="index.html">Index</a></li>
 <li><a href="basic_commands.html">Basic Git introduction</a></li>
+<li><a href="other_commands.html">Other Git commands</a></li>
 <li><a href="git_hosting_services.html">Git hosting services</a></li>
-<li><a href="using_repositories.html">Using repositories</a></li>
 </ul>
 </nav>
 
@@ -44,14 +39,24 @@
 <p>Do all the changes in the <code>repositoryname</code> directory created by the <code>git clone</code> command.</p>
 <p>Once you edit some files, use <code>git commit</code> to commit them. Use <code>-a</code> flag to commit all or specify the filenames to commit just some of them. Use <code>-m &quot;some commit message&quot;</code> to describe the changes you made. The fastest way to commit might be, for example:</p>
 <pre><code>git commit -am &quot;updated for GRASS GIS 7&quot;</code></pre>
-<p>If you want to provide a longer commit message, just omit the <code>-m &quot;...&quot;</code> and you will get an editor (<code>nano</code> text terminal editor by default on GNU/Linux) where you can write a commit message.</p>
+<p>If you want to provide a longer commit message, just omit the <code>-m &quot;...&quot;</code> and you will get an editor (<em>nano</em> text terminal editor by default on GNU/Linux) where you can write a commit message.</p>
 <p>If you created a new file, you have to tell Git to start tracking it:</p>
 <pre><code>git add some_file.txt</code></pre>
-<p>If you want to delete or move files, use <code>git rm</code> and <code>git mv</code>.</p>
-<p>To see what files where changed, added or deleted use <code>git status</code>.</p>
-<p>To review the changes in the files use <code>git diff</code>.</p>
+<p>If you want to delete or move files, use <code>git rm</code> and <code>git mv</code>:</p>
+<pre><code>git rm apples.txt
+git mv oranges.txt fruits.txt</code></pre>
+<p>To see what files where changed, added or deleted use <code>git status</code>:</p>
+<pre><code>git status</code></pre>
+<p>To review the changes in the files use <code>git diff</code>:</p>
+<pre><code>git diff
+git diff some_file.txt
+git diff some_directory</code></pre>
 <p>The commit itself records the change locally but does not put the change to the remote repository. Once you are ready to share your changes with others use <code>git push</code> to put the changes to the remote repository. All commits which were not pushed yet will by pushed.</p>
-<p>To get the changes of other contributors use <code>git pull</code>. You always have to pull before you push. It is often necessary to commit your changes before <code>git pull</code> otherwise Git will not be able to merge the incoming changes. If you get an editor with a message about merging, it is enough just to use the generated message by exiting the editor (using Ctrl+X in case the editor is <code>nano</code>). If the automatic merge is not possible, Git will put the conflicting parts into the files and mark them. Consult the further steps with other contributors.</p>
+<pre><code>git push</code></pre>
+<p>To get the changes of other contributors use <code>git pull</code>:</p>
+<pre><code>git pull</code></pre>
+<p>You always have to pull before you push. It is often necessary to commit your changes before <code>git pull</code> otherwise Git will not be able to merge the incoming changes. Git will try to merge the changes automatically. If you get an editor with a message about merging, it is enough just to use the generated message by saving the file and exiting the editor (using Ctrl+X in case the editor is <em>nano</em>).</p>
+<p>If the automatic merge is not possible, Git will put the conflicting parts into the files and mark them. Consult the further steps with other contributors.</p>
 
 </main>
 
@@ -64,7 +69,7 @@
 <li><a href="https://help.github.com/">GitHub documentation</a></li>
 <li><a href="https://try.github.io">Try Git online</a></li>
 <li>
-    <a href="https://github.com/wenzeslaus/git-and-github-workshop" title="Fork on GitHub" alt="octocat">
+    <a href="https://github.com/ncsu-osgeorel/git-and-github-workshop" title="Fork on GitHub" alt="octocat">
         <img src="img/github_logo.png">
     </a>
 </li>
