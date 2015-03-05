@@ -28,6 +28,9 @@
 <nav>
 <ul class="nav">
 <li><a href="index.html">Index</a></li>
+<li><a href="basic_commands.html">Basic Git introduction</a></li>
+<li><a href="git_hosting_services.html">Git hosting services</a></li>
+<li><a href="using_repositories.html">Using repositories</a></li>
 </ul>
 </nav>
 
@@ -35,8 +38,9 @@
 
 <main>
 <!-- This is a generated file. Do not edit. -->
+<h1 id="using-repositories">Using repositories</h1>
 <p><em>All examples suppose that you are using unix-like command line (so, use Git Bash on MS Windows).</em></p>
-<h1 id="using-git-together-with-dropbox">Using Git together with Dropbox</h1>
+<h2 id="using-git-together-with-dropbox">Using Git together with Dropbox</h2>
 <p><em>Note that this works also for other services and also any file-based backup ways such as USB memory sticks.</em></p>
 <p>Create a <em>bare</em> repository in the Dropbox directory (this one will act as a remote repository):</p>
 <pre><code>mkdir my_project
@@ -55,7 +59,7 @@ git push -u origin master</code></pre>
 git commit -am &quot;describe changes here&quot;
 git push</code></pre>
 <p>All commands shall be executed in the directory with the project, not in the directory created in Dropbox directory.</p>
-<h1 id="migrating-repository-to-github-from-another-hosting-option">Migrating repository to GitHub from another hosting option</h1>
+<h2 id="migrating-repository-to-github-from-another-hosting-option">Migrating repository to GitHub from another hosting option</h2>
 <p>Get the URL from the old repository host and do a <em>bare</em> clone of the repository (using <code>--bare</code> option):</p>
 <pre><code>git clone --bare the/repository/url/at/old/host</code></pre>
 <p>Create a (remote) repository at GitHub. Create the repository as empty repository without any files (without <code>.gitignore</code>, <code>README</code> (<code>README.md</code>/<code>README.rst</code>) and <code>LICENCE</code> files). Get repository URL from GitHub project.</p>
@@ -81,15 +85,19 @@ rm -rf repository-name.git</code></pre>
 
 <nav>
 <ul>
-<li><a href=""></a></li>
+<li><a href="http://git-scm.com/doc">Git documentation</a></li>
+<li><a href="http://git-scm.com/book">Pro Git book</a></li>
+<li><a href="https://help.github.com/">GitHub documentation</a></li>
+<li><a href="https://try.github.io">Try Git online</a></li>
 <li>
-    <a href="" title="Fork me on GitHub">
+    <a href="https://github.com/wenzeslaus/git-and-github-workshop" title="Fork on GitHub" alt="octocat">
         <img src="img/github_logo.png">
     </a>
 </li>
 <li>
     &copy; 2015
-    <a href="http://geospatial.ncsu.edu/osgeorel/">NCSU OSGeoREL</a>
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a>
+    <a href="http://www4.ncsu.edu/~vpetras/">Vaclav Petras</a>
 </li>
 </ul>
 </nav>
