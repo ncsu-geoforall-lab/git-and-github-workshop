@@ -35,22 +35,59 @@
 <!-- This is a generated file. Do not edit. -->
 <h1 id="other-git-commands">Other Git commands</h1>
 <p>This is a selection of commands which are not essential but are very useful and still quite easy.</p>
-<blockquote>
-<p>git checkout some_file.txt</p>
-<p>git clone url/of/a/repository custom_directory_name</p>
+<h2 id="committing-just-certain-changes">Committing just certain changes</h2>
+<p>Review changes in certain files:</p>
+<pre><code>git diff some_file.txt some_other_file.txt</code></pre>
 <p>Commit just certain files:</p>
-<p>git diff some_file.txt some_other_file.txt git commit some_file.txt some_other_file.txt -m &quot;message&quot;</p>
-<p>git reset --hard</p>
-<p>git revert --no-edit 51ef1b3</p>
-</blockquote>
+<pre><code>git commit some_file.txt some_other_file.txt -m &quot;message&quot;</code></pre>
+<p>Review changes but don't show any whitespace changes:</p>
+<pre><code>git diff --ignore-space-change</code></pre>
+<h2 id="removing-changes-fixing-mistakes-and-getting-older-versions">Removing changes, fixing mistakes and getting older versions</h2>
+<p>When you have some local changes in a file and you don't want them anymore. You can get back to last committed version using:</p>
+<pre><code>git checkout some_file.txt
+
+git reset --hard
+
+git revert --no-edit 51ef1b3</code></pre>
 <p><code>--no-edit</code> if we don't want to change commit message (default message is <code>Revert &quot;original commit message&quot;</code>). If <code>--no-commit</code> is provided as parameter, automatic commit is not executed.</p>
-<blockquote>
-<p>git diff --ignore-space-change</p>
-<p>git commit --amend -m &quot;new commit message&quot;</p>
-<p>git stash</p>
-<p>git stash apply git stash apply --index</p>
-<p>git log --graph --oneline</p>
-</blockquote>
+<pre><code>git commit --amend -m &quot;new commit message&quot;</code></pre>
+<h2 id="saving-unfinished-changes">Saving unfinished changes</h2>
+<p>To save the changes without actual commit use:</p>
+<pre><code>git stash</code></pre>
+<p><code>git stash</code> removes the local changes from the directory but keeps them in the local repository. So, you can get the changes back using:</p>
+<pre><code>git stash apply</code></pre>
+<p>Often you want to include also <code>--index</code> to restore exact state of what is prepared for commit (staged):</p>
+<pre><code>git stash apply --index</code></pre>
+<h2 id="exploring-the-history-of-changes">Exploring the history of changes</h2>
+<pre><code>git log --graph --oneline</code></pre>
+<h2 id="ignoring-some-files-or-directories-in-the-repository">Ignoring some files or directories in the repository</h2>
+<p>When we use <code>git status</code> can see files or directories which are present in the directory with repository clone but are not tracked using Git. Sometimes it means that we should add them to the repository but sometimes these can be some generated files or backup files from some text editors which we don't want to track. These files would be always visible in <code>git status</code>, although we don't wish to track them. In this case we can use <code>.gitignore</code> file where we specify which files or directories should be ignored by Git.</p>
+<p>Which files are ignored depends on the project, for C and C++ projects we typically want <code>.c</code>, <code>.cpp</code> and <code>.h</code> files to be tracked, while <code>.o</code> are intermediate product of compilation. For Python, we usually track <code>.py</code> files but we are ignoring <code>.pyc</code> files. So, in case of project written in Python and our editor creating backup files which ends with <code>~</code> (tilde), our <code>.gitignore</code> file would have the following contents:</p>
+<pre><code>*.pyc
+*~</code></pre>
+<p>The <code>.gitignore</code> file is using unix-style file matching patterns, so <code>*</code> (start) means any character or characters.</p>
+<p>Git will look to the <code>.gitignore</code> file once it is in the directory. However, in most cases we want to share this file also with our coworkers or we want to track it and backup it. Thus we should tell Git to version the file using:</p>
+<pre><code>git add .gitignore</code></pre>
+<p>Note and don't forget the dot at the beginning of <code>.gitignore</code>. The dot is a naming convention for hidden and configuration files in unix-like system.</p>
+<h2 id="managing-files-and-directories-in-detail">Managing files and directories in detail</h2>
+<p>When we create a file or directory, Git does not start to version it automatically, we have to tell this to Git using <code>git add</code>. Adding a directory will also add its current content.</p>
+<pre><code>git add some_file.txt
+git add some_directory</code></pre>
+<p>Renaming, moving and deleting files or directories should be done using Git, so that Git knows about it and can track this change.</p>
+<pre><code>git rm apples.txt
+git mv oranges.txt fruits.txt</code></pre>
+<p>Use <code>git status</code> to keep track of the changes in files and directories:</p>
+<pre><code>git status</code></pre>
+<h2 id="cloning-a-repository">Cloning a repository</h2>
+<p>By default, when we clone a repository, the directory name of the local repository is the same as the name of the repository. For example, cloning cloning repository <code>useful-project</code> at GitHub from user <code>john</code>, will create a directory <code>useful-project</code> in the current working directory.</p>
+<pre><code>git clone github.com/john/useful-project.git</code></pre>
+<p>Now we would have directory <code>useful-project</code> with a clone of the repository. If we want to create a directory with a custom name, we have to specify it as additional parameter:</p>
+<pre><code>git clone github.com/john/useful-project.git johns-useful-project</code></pre>
+<p>Now we would get directory <code>johns-useful-project</code>. In general, the syntax is:</p>
+<pre><code>git clone url/of/a/repository custom_directory_name</code></pre>
+<p>If we decide later after clone to rename directory with the clone, we can just use standard tools to do it, for example operating system file manager or <code>mv</code> command on unix:</p>
+<pre><code>mv johns-useful-project johns-very-useful-project</code></pre>
+<p>We can also more the directory wherever we want. Git itself does not care about the name or placement of the directory, however some (graphical) applications for managing Git repositories might need some special care if the repository was moved or renamed by some other applications.</p>
 
 </main>
 
