@@ -25,6 +25,9 @@ FOOT_FILE=foot.html
 
 OUTDIR="../git-and-github-workshop-pages"
 
+# disable Jekyll which is not needed
+touch $OUTDIR/.nojekyll
+
 if [ ! -d "$OUTDIR" ]; then
     echo "The directory $OUTDIR does not exists and it will be created for you."
     mkdir $OUTDIR
